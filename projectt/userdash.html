@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Bus Reservation System</title>
+    <link rel="stylesheet" href="udash.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+       
+        .image-container {
+            display: flex; /* Use flexbox to align images horizontally */
+            justify-content: center; /* Center images horizontally */
+            align-items: center; /* Align images vertically (if needed) */
+            gap: 20px; /* Optional, space between images */
+        }
+
+        .image-container img {
+            width: 100px; /* Adjust image width as needed */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Top Menu Bar -->
+        <div class="topbar">
+            <div class="topbar-header">
+                <h2>User Panel</h2>
+            </div>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="ubooking.php">Manage Tickets</a></li>
+                <li><a href="available.php">Available Buses</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="report.php">Report problem</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Carousel Section -->
+        <div class="carousel">
+            <div class="slide">
+                <img src="https://media.istockphoto.com/id/1096035138/photo/beautiful-young-couple-relaxing-after-hiking-and-taking-a-break.jpg?s=612x612&w=0&k=20&c=iwNan7K7gbiIl2unv-9EuE5Yej-h_l1OrLNMel0husU=" alt="Place 1">
+            
+            </div>
+            <div class="slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYgr4s-EiOtR4-jEy9zPR8PVN98LpxJI-6rQ&s" alt="Place 2">
+                <div class="description">
+                    
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://as2.ftcdn.net/v2/jpg/02/18/58/51/1000_F_218585163_hKijGOfFIkC3Fuo9JgX2sVGv69UKoXmM.jpg" alt="Place 3">
+                <div class="description">
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://thumbs.dreamstime.com/b/kathmandu-nepal-city-skyline-color-buildings-isolated-white-business-travel-tourism-concept-historic-vector-342888137.jpg" alt="Place 4">
+                <div class="description">
+                   
+                </div>
+            </div>
+        </div>
+
+        <!-- Frequently Asked Questions Section -->
+        <div class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>1. How do I book a bus ticket?</h3>
+                <p>To book a ticket, you need to log in to your account, select the route and date, and then proceed with payment.</p>
+            </div>
+            <div class="faq-item">
+                <h3>2. Can I cancel my bus ticket?</h3>
+                <p>Yes, you can cancel your ticket within 24 hours of booking for a full refund.</p>
+            </div>
+            <div class="faq-item">
+                <h3>3. What payment methods are accepted?</h3>
+                <p>We accept credit cards, debit cards, and mobile payment options such as PayPal and Google Pay.</p>
+            </div>
+            <div class="faq-item">
+                <h3>4. Is there a discount for students?</h3>
+                <p>Yes, students can avail of a 10% discount on bus tickets when they present their student ID.</p>
+            </div>
+            <div class="faq-item">
+                <h3>5. Can I modify my booking after confirmation?</h3>
+                <p>Yes, you can modify your booking by contacting customer support before the departure date.</p>
+            </div>
+            <div class="faq-item">
+                <h3>6. How can I track my bus?</h3>
+                <p>After booking, you will receive a link to track the live status of your bus on the scheduled day of travel.</p>
+            </div>
+            <div class="faq-item">
+                <h3>7. What if I miss my bus?</h3>
+                <p>If you miss your bus, please contact customer support to inquire about available options for rebooking or refunds.</p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel .slide');
+
+        function showSlide(index) {
+            if (index >= slides.length) currentSlide = 0;
+            if (index < 0) currentSlide = slides.length - 1;
+
+            const newTransformValue = `translateX(-${currentSlide * 100}%)`;
+            slides.forEach(slide => {
+                slide.style.transform = newTransformValue;
+            });
+        }
+
+        // Automatically move to the next slide every 3 seconds
+        setInterval(() => {
+            currentSlide++;
+            showSlide(currentSlide);
+        }, 30000);
+    </script>
+</body>
+</html>

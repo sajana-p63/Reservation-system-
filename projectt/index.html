@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bus Reservation System</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Navigation Menu */
+        nav {
+            text-align: center;
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: #333;
+        }
+
+        /* Image Slider */
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 1300px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 1s ease;
+        }
+
+        .slide {
+            min-width: 100%;
+            transition: transform 1s ease;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Arrows */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 16px;
+            cursor: pointer;
+            font-size: 18px;
+            border: none;
+            z-index: 10;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Offers Section */
+        .offers {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .offer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .offer h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .offer p {
+            font-size: 18px;
+        }
+
+        .offer:hover {
+            background-color: #45a049;
+        }
+
+        /* More Beautiful Sites Section */
+        .beautiful-sites {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 20px;
+            background-color: #eeeeee;
+        }
+
+        .site {
+            width: 30%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .site img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .site h3 {
+            margin: 15px 0;
+        }
+
+        .site p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .site:hover {
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Main Content */
+        .container {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .container h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .container p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        /* Styling for the button */
+.button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 15px 32px; /* Add padding */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Inline block display */
+    font-size: 16px; /* Text size */
+    margin: 4px 2px; /* Margin for spacing */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Hover effect for the button */
+.button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+/* Parent container */
+.contain {
+    width: 100%; /* Ensure container takes full width */
+    text-align: center; /* Center content horizontally */
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Online Bus Reservation System</h1>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="admin.php">Admin Register</a>
+        <a href="user.php">User Login</a>
+    </nav>
+
+    <!-- Image Slider -->
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="https://www.gtslb.com/wp-content/uploads/Global-Technology-Solutions-news.jpg" alt="Bus Image 1">
+            </div>
+            <div class="slide">
+                <img src="https://media.licdn.com/dms/image/v2/C4E1BAQHUzu97_aNevw/company-background_10000/company-background_10000/0/1588910364426/globaltechnologymarket_cover?e=2147483647&v=beta&t=TJt87BTH4L8ryZUdVFJqcCQf14QDCCIXXDcTxXtrqRQ" alt="Bus Image 2">
+            </div>
+            <div class="slide">
+                <img src="https://t4.ftcdn.net/jpg/04/17/28/93/360_F_417289346_hrs0D4Lo8dSv3aWDqkQpRB0U9PbtFX6n.jpg" alt="Bus Image 3">
+            </div>
+        </div>
+
+        <!-- Arrows -->
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    <div class="contain">
+    <a href="available.php"><button class="button" type="submit" name="collect_amount"> check the available bus </button></a>
+</div>
+    <!-- Offers Section -->
+    <div class="offers">
+        <div class="offer">
+            <h3>Dashain Offer</h3>
+            <p>Get 20% off on your bus bookings during Dashain festival!</p>
+        </div>
+        <div class="offer">
+            <h3>New Year Offer</h3>
+            <p>Book tickets for the New Year and get a special discount of 15%!</p>
+        </div>
+        <div class="offer">
+            <h3>Christmas Offer</h3>
+            <p>Enjoy up to 25% off on bus bookings this Christmas season!</p>
+        </div>
+    </div>
+
+    <!-- More Beautiful Sites Section -->
+    <div class="beautiful-sites">
+        <div class="site">
+            <img src="https://admin.ntb.gov.np/image-cache/SS_tile_pic-1630564018.jpg?p=main&s=be278caaa1af2f7df3044b3a764ce2fc" alt="Site 1">
+            <h3>Pokhara and Sarangkot Tour</h3>
+            <p>Explore the stunning mountain views with our scenic tours.</p>
+        </div>
+        <div class="site">
+            <img src="https://nepal101.net/wp-content/uploads/2020/12/2.-Boudhanath-Stupa-world-heritage-site-Nepal-1024x683.jpeg" alt="Site 2">
+            <h3>Cultural Heritage Tour</h3>
+            <p></p>
+        </div>
+        <div class="site">
+            <img src=" https://www.vivaanadventure.com/wp-content/uploads/2018/07/76909341_554038845166656_3920037840554818945_n-1080x540.jpg" alt="Site 3">
+            <h3>Wildlife Safari Tour</h3>
+            <p></p>
+        </div>
+        <div class="site">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY3XRpiQ0VMqQl_HNPwLmkVAojTFsQP4NXvw&s" alt="Site 3">
+            <h3> Lake and Waterfalls Tour</h3>
+            <p></p>
+        </div>
+        <div class="site">
+            <img src="https://www.visithimalayastrek.com/uploads/galleries/gallery-01646038138.jpg" alt="Site 3">
+            <h3>Muktinath and Jomsom Bus Tour
+            </h3>
+            <p></p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Welcome to Our Online Bus Reservation System</h1>
+        <p>Book your bus tickets online with ease! Enjoy a smooth journey with just a few clicks.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Online Bus Reservation System</p>
+    </footer>
+
+    <!-- JavaScript for Slider -->
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            let slides = document.querySelectorAll(".slide");
+            if (slideIndex >= slides.length) { slideIndex = 0; }
+            if (slideIndex < 0) { slideIndex = slides.length - 1; }
+            document.querySelector(".slides").style.transform = `translateX(${-slideIndex * 100}%)`;
+        }
+
+        function moveSlide(n) {
+            slideIndex += n;
+            showSlides();
+        }
+
+        setInterval(function() {
+            slideIndex++;
+            showSlides();
+        }, 3000);
+
+        showSlides(); // Initialize the first slide
+    </script>
+
+</body>
+</html>

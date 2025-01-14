@@ -1,0 +1,167 @@
+/* Basic Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Top Menu Bar */
+.topbar {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;  /* Space between header and menu items */
+    align-items: center;  /* Align vertically */
+    padding: 10px 20px;
+    box-sizing: border-box;  /* Ensure padding is included in the width */
+}
+
+/* Header Text */
+.topbar-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+/* Style the unordered list (menu items) */
+.topbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+/* List Items (Menu Links) */
+.topbar ul li {
+    margin-left: 20px;
+}
+
+/* Links Styling */
+.topbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Hover Effect */
+.topbar ul li a:hover {
+    background-color: #575757;
+}
+
+/* Style the login button */
+.login-btn {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Green background */
+    margin-left: 20px; /* Adds space between the other menu items */
+}
+
+.login-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Carousel Styles */
+.carousel {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.description {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.description h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.description p {
+    font-size: 1rem;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.faq h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+/* Ensure that container width fits well */
+.container {
+    width: 100%;
+    padding: 20px;
+}
+/* FAQ Section */
+.faq {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    margin-top: 40px;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
